@@ -1,0 +1,25 @@
+mat-toolbar {
+    box-shadow: 0 4px 5px 0 rgba(0,0,0,.3);
+}
+
+.title {
+    cursor: pointer;
+}
+
+.title-icon {
+    cursor: pointer;
+}
+
+.icon {
+    padding: 0 14px;
+    margin-right: 25px;
+    cursor: pointer;
+}
+
+.icon:hover{
+    color: #eee;
+}
+
+.spacer {
+    flex: 1 1 auto;
+}

@@ -1,0 +1,32 @@
+.sidebar {
+    position : fixed;
+    height: 100%;
+    width: 250px;
+}
+
+.header__img {
+    padding: 20px;
+    border-radius: 50%;
+    background-color: #fff;
+    border: 1px solid #fff;
+}
+
+.header__img:hover {
+    box-shadow: 0 0 10px black;
+    cursor: pointer;
+}
+
+.sidebar__toogle {
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+.sidebar__tooggle_icon {
+    font-size: 1.6em;
+    cursor: pointer;
+}
+
+.sidebar__tooggle_icon:hover {
+    color: #eee !important;
+}
+
