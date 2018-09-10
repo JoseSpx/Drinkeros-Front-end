@@ -4,12 +4,14 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { SidebarComponent } from './sidebar/sidebar.component';
+import { RouterModule } from '@angular/router'
 
 @NgModule({
   imports: [
     CommonModule,
     MatToolbarModule,
-    MatIconModule
+    MatIconModule,
+    RouterModule
   ],
   exports : [
     NavbarComponent,

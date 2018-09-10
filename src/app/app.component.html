@@ -3,9 +3,9 @@
     <app-navbar></app-navbar>
   </div>
   <div class="sidenav">
-    <app-sidebar></app-sidebar>
+    <app-sidebar (toggleSideBarEvent)="toggleBody($event)"></app-sidebar>
   </div>
-  <div class="main-body">
+  <div id="main-body" class="main-body">
     <router-outlet></router-outlet>
   </div>
 </div>

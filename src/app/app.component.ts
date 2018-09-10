@@ -7,4 +7,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
+
+  public toggleBody($event) {
+    let mainBody = document.getElementById("main-body");
+    mainBody.classList.toggle("main-body-toggle");
+  }
+
+
 }

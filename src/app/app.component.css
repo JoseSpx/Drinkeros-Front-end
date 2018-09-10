@@ -1,0 +1,8 @@
+.main-body{
+    margin-left: 250px;
+    transition: all 0.7s;
+}
+
+.main-body-toggle {
+    margin-left: 40px;
+}

@@ -11,6 +11,18 @@
     width: 100%;
 }
 
+:root {
+    --dark-primary-color : #455A64;
+    --default-primary-color : #607D8B;
+    --light-primary-color : #CFD8DC;
+    --text-primary-color : #FFFFFF;
+    --accent-color : #536DFE;
+    --accent-secondary-color : #8C9EFF;
+    --primary-text-color : #212121;
+    --secondary-text-color : #757575;
+    --divider-color : #BDBDBD;
+}
+
 .dark-primary-color    { background: #455A64; }
 .default-primary-color { background: #607D8B; }
 .light-primary-color   { background: #CFD8DC; }
