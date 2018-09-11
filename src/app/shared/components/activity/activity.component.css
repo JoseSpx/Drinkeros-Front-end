@@ -1,0 +1,8 @@
+mat-card {
+    cursor: pointer;
+    background-color: var(--light-primary-color);
+}
+
+mat-card:hover {
+    box-shadow: 0 10px 10px var(--dark-primary-color);
+}

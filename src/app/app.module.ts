@@ -6,6 +6,9 @@ import { AppRoutingModule } from './/app-routing.module';
 import { DashboardModule } from './modules/dashboard/dashboard.module';
 import { ComponentsModule } from './shared/components/components.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatButton, MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
+
 
 @NgModule({
   declarations: [
@@ -16,7 +19,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     AppRoutingModule,
     DashboardModule,
     ComponentsModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatButtonModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]

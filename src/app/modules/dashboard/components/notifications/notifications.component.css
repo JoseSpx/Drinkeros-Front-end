@@ -1,0 +1,24 @@
+.box__title {
+    display: flex;
+    justify-content: start;
+    background-color: var(--default-primary-color);
+    color: #fff;
+    border-radius: 5px 5px  0  0;
+    padding: 5px 10px;
+}
+
+.box__body {
+    background-color: var(--light-primary-color);
+    color: var(--primary-text-color);
+}
+
+.box-money__title {
+    background-color: var(--dark-primary-color);
+    color: #fff;
+    border-radius: 5px 5px 0 0;
+}
+
+.box-money__body {
+    background-color: #fff;
+    border-radius:  0 0 5px 5px;
+}

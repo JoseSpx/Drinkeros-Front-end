@@ -1,3 +1,8 @@
+#main-body {
+    padding: 100px 10px 0 10px;
+    z-index: 1;
+}
+
 .main-body{
     margin-left: 250px;
     transition: all 0.7s;
@@ -5,4 +10,14 @@
 
 .main-body-toggle {
     margin-left: 40px;
+}
+
+#btn-action {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--accent-color);
 }

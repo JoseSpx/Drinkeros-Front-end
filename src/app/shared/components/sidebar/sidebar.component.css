@@ -4,6 +4,7 @@
     width: 250px;
     transform: translateX(0);
     transition: all 0.8s;
+    top: 64px;
 }
 
 .sidebar--hide {
