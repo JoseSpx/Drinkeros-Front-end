@@ -8,6 +8,7 @@ import { RouterModule } from '@angular/router';
 import { ActivityComponent } from './activity/activity.component'
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
+import { TitleBarComponent } from './title-bar/title-bar.component';
 
 @NgModule({
   imports: [
@@ -21,12 +22,14 @@ import { MatButtonModule } from '@angular/material/button';
   exports : [
     NavbarComponent,
     SidebarComponent,
-    ActivityComponent
+    ActivityComponent,
+    TitleBarComponent
   ],
   declarations: [
     NavbarComponent,
     SidebarComponent,
-    ActivityComponent
+    ActivityComponent,
+    TitleBarComponent
   ]
 })
 export class ComponentsModule { }
