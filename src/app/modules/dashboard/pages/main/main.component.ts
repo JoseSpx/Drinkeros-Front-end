@@ -8,6 +8,8 @@ import { ActivityPane } from '../../../../shared/models/ActivityPane';
 })
 export class MainComponent implements OnInit {
 
+  public showProgressBar : boolean = true;
+
   public activities : ActivityPane[] = [
     {
       title : "Últimas Ventas",
@@ -30,6 +32,11 @@ export class MainComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+
+    setInterval(() => {
+      this.showProgressBar = false;
+    }, 2000)
+
   }
 
 

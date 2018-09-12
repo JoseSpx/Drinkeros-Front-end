@@ -9,6 +9,8 @@ import { ActivityComponent } from './activity/activity.component'
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { TitleBarComponent } from './title-bar/title-bar.component';
+import { ProgressBarComponent } from './progress-bar/progress-bar.component';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
 
 @NgModule({
   imports: [
@@ -17,19 +19,22 @@ import { TitleBarComponent } from './title-bar/title-bar.component';
     MatIconModule,
     RouterModule,
     MatCardModule,
-    MatButtonModule
+    MatButtonModule,
+    MatProgressBarModule
   ],
   exports : [
     NavbarComponent,
     SidebarComponent,
     ActivityComponent,
-    TitleBarComponent
+    TitleBarComponent,
+    ProgressBarComponent
   ],
   declarations: [
     NavbarComponent,
     SidebarComponent,
     ActivityComponent,
-    TitleBarComponent
+    TitleBarComponent,
+    ProgressBarComponent
   ]
 })
 export class ComponentsModule { }

@@ -8,6 +8,7 @@ import { ComponentsModule } from './shared/components/components.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButton, MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
+import { InventoryModule } from './modules/inventory/inventory.module';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { MatIconModule } from '@angular/material/icon';
     ComponentsModule,
     BrowserAnimationsModule,
     MatButtonModule,
-    MatIconModule
+    MatIconModule,
+    InventoryModule
   ],
   providers: [],
   bootstrap: [AppComponent]

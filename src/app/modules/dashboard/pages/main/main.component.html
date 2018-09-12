@@ -1,23 +1,28 @@
-<div class="container-fluid">
-  <div class="row">
-    <div class="col-12">
-      <app-title-bar></app-title-bar>  
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-12 col-lg-6">
-      <app-state-money></app-state-money>
-    </div>
-    <div class="col-12 col-lg-6">
-      <app-notifications></app-notifications>
-    </div>
-    <div class="col-12 mt-4">
-      <h6> Actividades más frecuentes </h6>
+<app-progress-bar *ngIf="showProgressBar"></app-progress-bar>
+<div class="body-margin">
+  <div class="container-fluid">
       <div class="row">
-          <div class="col-3" *ngFor="let activity of activities">
-              <app-activity [activityData]="activity" ></app-activity>
-          </div>
+        <div class="col-12">
+          <app-title-bar [title]="'Panel Principal'"></app-title-bar>  
+        </div>
       </div>
-    </div>
+  </div>
+  <div *ngIf="!showProgressBar" class="container-fluid">
+      <div class="row">
+        <div class="col-12 col-lg-6">
+          <app-state-money></app-state-money>
+        </div>
+        <div class="col-12 col-lg-6">
+          <app-notifications></app-notifications>
+        </div>
+        <div class="col-12 mt-4">
+          <h6> Actividades más frecuentes </h6>
+          <div class="row">
+              <div class="col-3" *ngFor="let activity of activities">
+                  <app-activity [activityData]="activity" ></app-activity>
+              </div>
+          </div>
+        </div>
+      </div>
   </div>
 </div>
