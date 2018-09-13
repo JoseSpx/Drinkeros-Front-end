@@ -7,9 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ClientDetailComponent implements OnInit {
 
+  public showProgressBar : boolean = true;
+
   constructor() { }
 
   ngOnInit() {
+    setInterval(() => {
+      this.showProgressBar = false;
+    }, 1000)
   }
 
 }

@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { MainComponent as DashboardMainComponent } from './modules/dashboard/pages/main/main.component';
 import { MainComponent as ClientMainComponent } from './modules/inventory/client/pages/main/main.component';
+import { ClientDetailComponent } from './modules/inventory/client/pages/client-detail/client-detail.component';
 
 const routes : Routes = [
    { path : '', component :  DashboardMainComponent },
@@ -12,7 +13,8 @@ const routes : Routes = [
        { 
          path : 'clientes',
          children : [
-           { path : '', component : ClientMainComponent }
+           { path : '', component : ClientMainComponent },
+           { path : ':id', component : ClientDetailComponent }
          ]
        }
      ]

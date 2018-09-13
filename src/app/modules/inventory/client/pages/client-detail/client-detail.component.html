@@ -1,3 +1,13 @@
-<p>
-  client-detail works!
-</p>
+<app-progress-bar *ngIf="showProgressBar"></app-progress-bar>
+<div class="body-margin">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-12">
+        <app-title-bar [title]="'Datos del Cliente'" ></app-title-bar>
+      </div>
+    </div>
+  </div>
+  <div *ngIf="!showProgressBar" class="container-fluid">
+    body
+  </div>
+</div>

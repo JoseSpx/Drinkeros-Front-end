@@ -2,6 +2,7 @@ import { Client } from './../models/Client';
 
 export const clients : Client [] = [
     {
+        id : 1,
         name : "Jose Alfred",
         lastname : "Suarez Principe",
         email : "josespx@gmail.com",
@@ -14,6 +15,7 @@ export const clients : Client [] = [
         }
     },
     {
+        id : 2,
         name : "Jose Alfred",
         lastname : "Suarez Principe",
         email : "josespx@gmail.com",
@@ -26,6 +28,7 @@ export const clients : Client [] = [
         }
     },
     {
+        id : 3,
         name : "Jose Alfred",
         lastname : "Suarez Principe",
         email : "josespx@gmail.com",
@@ -38,6 +41,7 @@ export const clients : Client [] = [
         }
     },
     {
+        id : 4,
         name : "Jose Alfred",
         lastname : "Suarez Principe",
         email : "josespx@gmail.com",
@@ -50,6 +54,7 @@ export const clients : Client [] = [
         }
     },
     {
+        id : 5,
         name : "Jose Alfred",
         lastname : "Suarez Principe",
         email : "josespx@gmail.com",
@@ -62,6 +67,7 @@ export const clients : Client [] = [
         }
     },
     {
+        id : 6,
         name : "Jose Alfred",
         lastname : "Suarez Principe",
         email : "josespx@gmail.com",
@@ -74,6 +80,7 @@ export const clients : Client [] = [
         }
     },
     {
+        id : 7,
         name : "Jose Alfred",
         lastname : "Suarez Principe",
         email : "josespx@gmail.com",
@@ -86,6 +93,7 @@ export const clients : Client [] = [
         }
     },
     {
+        id : 8,
         name : "Jose Alfred",
         lastname : "Suarez Principe",
         email : "josespx@gmail.com",
@@ -98,6 +106,7 @@ export const clients : Client [] = [
         }
     },
     {
+        id : 9,
         name : "Jose Alfred",
         lastname : "Suarez Principe",
         email : "josespx@gmail.com",
