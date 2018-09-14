@@ -68,7 +68,7 @@ export class FormClientComponent implements OnInit {
   }
 
   public save() {
-    if (this.state = "save") {
+    if (this.state == "save") {
       this.client.typeDocument = this.typeDocument;
       this.clientService.saveClient(this.client)
         .subscribe(

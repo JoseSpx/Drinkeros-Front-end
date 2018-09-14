@@ -21,7 +21,7 @@ export class MainComponent implements OnInit {
   }
 
   public newClient() {
-    this.router.navigateByUrl("/inventario/clientes/nuevo");
+    this.router.navigateByUrl("/inventario/proveedores/nuevo");
   }
 
 }

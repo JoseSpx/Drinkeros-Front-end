@@ -5,6 +5,8 @@ import { MainComponent as ClientMainComponent } from './modules/inventory/client
 import { ClientDetailComponent } from './modules/inventory/client/pages/client-detail/client-detail.component';
 import { ClientNewComponent } from './modules/inventory/client/pages/client-new/client-new.component';
 import { MainComponent as ProviderMainComponent } from './modules/inventory/provider/pages/main/main.component';
+import { ProviderNewComponent } from './modules/inventory/provider/pages/provider-new/provider-new.component';
+import { ProviderDetailComponent } from './modules/inventory/provider/pages/provider-detail/provider-detail.component';
 
 const routes : Routes = [
    { path : '', component :  DashboardMainComponent },
@@ -23,7 +25,9 @@ const routes : Routes = [
        {
          path : 'proveedores',
          children : [
-           { path : '', component : ProviderMainComponent }
+           { path : '', component : ProviderMainComponent },
+           { path : 'nuevo', component : ProviderNewComponent },
+           { path : ':id', component : ProviderDetailComponent }
          ]
        }
      ]

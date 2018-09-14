@@ -5,6 +5,10 @@ import { TableProvidersComponent } from './components/table-providers/table-prov
 import { MatIconModule, MatPaginatorModule, MatFormFieldModule, MatTableModule, MatInputModule, MatButtonModule } from '@angular/material';
 import { ComponentsModule } from '../../../shared/components/components.module';
 import { ProviderService } from '../../../shared/services/provider.service';
+import { ProviderDetailComponent } from './pages/provider-detail/provider-detail.component';
+import { ProviderNewComponent } from './pages/provider-new/provider-new.component';
+import { FormProviderComponent } from './components/form-provider/form-provider.component';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -16,14 +20,15 @@ import { ProviderService } from '../../../shared/services/provider.service';
     MatTableModule,
     ComponentsModule,
     MatInputModule,
-    MatButtonModule
+    MatButtonModule,
+    FormsModule
   ],
   providers : [
     ProviderService
   ],
   declarations: [
     MainComponent, 
-    TableProvidersComponent
+    TableProvidersComponent, ProviderDetailComponent, ProviderNewComponent, FormProviderComponent
   ]
 })
 export class ProviderModule { }

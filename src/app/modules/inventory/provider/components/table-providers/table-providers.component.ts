@@ -44,8 +44,8 @@ export class TableProvidersComponent implements OnInit {
     this.dataSource.filter = filterValue.trim().toLowerCase();
   }
 
-  public goClientDetail(id : number) {
-    this.router.navigateByUrl("/inventario/clientes/" + id);
+  public goProviderDetail(id : number) {
+    this.router.navigateByUrl("/inventario/proveedores/" + id);
   }
 
   public deleteClient(id : number) {
