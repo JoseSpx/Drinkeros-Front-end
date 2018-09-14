@@ -48,7 +48,7 @@ export class TableProvidersComponent implements OnInit {
     this.router.navigateByUrl("/inventario/proveedores/" + id);
   }
 
-  public deleteClient(id : number) {
+  public deleteProvider(id : number) {
     swal({
       title: 'Está Seguro ?',
       text: "Se eliminará al proveedor!",
