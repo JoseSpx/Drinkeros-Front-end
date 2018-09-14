@@ -1,8 +1,8 @@
 import { Component, OnInit, ViewChild, Output, EventEmitter } from '@angular/core';
 import { MatPaginator, MatTableDataSource } from '@angular/material';
 import { Router } from '@angular/router';
-import { ClientService } from '../../../../../shared/services/client.service';
-import { Client } from '../../../../../shared/models/Client';
+import { ProviderService } from '../../../../../shared/services/provider.service';
+import { Provider } from '../../../../../shared/models/Provider';
 
 declare var swal : any;
 
@@ -13,7 +13,7 @@ declare var swal : any;
 })
 export class TableProvidersComponent implements OnInit {
 
-  public displayedColumns : string[] = ['name', 'lastname','email', 'typeDocument', 'document','edit','delete'];
+  public displayedColumns : string[] = ['ruc', 'name', 'email', 'address', 'phone','edit','delete'];
   public dataSource;
   
   @ViewChild(MatPaginator)
@@ -24,17 +24,17 @@ export class TableProvidersComponent implements OnInit {
 
   constructor(
     private router : Router,
-    private clientService : ClientService
+    private providerService : ProviderService
   ) { }
 
   ngOnInit() {
-    this.getClients();
+    this.getProviders();
   }
 
-  public getClients() {
-    this.clientService.findAllClients()
+  public getProviders() {
+    this.providerService.findAll()
      .subscribe(data => {
-        this.dataSource = new MatTableDataSource<Client>(data);
+        this.dataSource = new MatTableDataSource<Provider>(data);
         this.dataSource.paginator = this.paginator;
         this.loaded.emit(true);
      });
@@ -51,7 +51,7 @@ export class TableProvidersComponent implements OnInit {
   public deleteClient(id : number) {
     swal({
       title: 'Está Seguro ?',
-      text: "Se eliminará al cliente!",
+      text: "Se eliminará al proveedor!",
       type: 'warning',
       showCancelButton: true,
       confirmButtonColor: '#3085d6',
@@ -59,15 +59,15 @@ export class TableProvidersComponent implements OnInit {
       confirmButtonText: 'Aceptar!'
     }).then((result) => {
       if (result.value) {
-        this.clientService.deleteClient(id)
+        this.providerService.delete(id)
           .subscribe(
             () => {
               swal(
                 'Deleted!',
-                'El Cliente ha sido eliminado',
+                'El Proveedor ha sido eliminado',
                 'success'
               )
-              this.getClients();
+              this.getProviders();
             }
            )
         
