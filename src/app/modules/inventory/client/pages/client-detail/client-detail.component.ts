@@ -1,4 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { Client } from '../../../../../shared/models/Client';
+import { ClientService } from '../../../../../shared/services/client.service';
+import { ActivatedRoute } from '@angular/router';
+import { TypeDocumentService } from '../../../../../shared/services/type-document.service';
+import { TypeDocument } from '../../../../../shared/models/TypeDocument';
 
 @Component({
   selector: 'app-client-detail',
@@ -7,14 +12,46 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ClientDetailComponent implements OnInit {
 
+  private id : number;
   public showProgressBar : boolean = true;
 
-  constructor() { }
+  public client : Client;
+  public typeDocumentList : TypeDocument[];
+
+  constructor(
+    private route : ActivatedRoute,
+    private clientService : ClientService,
+    private typeDocumentService : TypeDocumentService
+  ) { }
 
   ngOnInit() {
-    setInterval(() => {
-      this.showProgressBar = false;
-    }, 1000)
+    this.id = this.getParamId();
+    this.getClient(this.id);
+  }
+
+  public getParamId() : number {
+    let id = +this.route.snapshot.paramMap.get("id");
+    return id;
+  }
+
+  public getClient(id : number) {
+    this.clientService.findClientByID(id)
+      .subscribe(
+        data => {
+          this.client = data;
+          this.getTypeDocuments();
+        }
+      )
+  }
+
+  public getTypeDocuments() {
+    this.typeDocumentService.findAll()
+      .subscribe(
+        data => {
+          this.typeDocumentList = data;
+          this.showProgressBar = false;
+        }
+      )
   }
 
 }

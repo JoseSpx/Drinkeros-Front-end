@@ -9,6 +9,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButton, MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { InventoryModule } from './modules/inventory/inventory.module';
+import { ClientService } from './shared/services/client.service';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -23,9 +25,12 @@ import { InventoryModule } from './modules/inventory/inventory.module';
     BrowserAnimationsModule,
     MatButtonModule,
     MatIconModule,
-    InventoryModule
+    InventoryModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [
+    
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

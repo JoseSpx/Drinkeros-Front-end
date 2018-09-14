@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-main',
@@ -9,12 +10,19 @@ export class MainComponent implements OnInit {
 
   public showProgressBar : boolean = true;
 
-  constructor() { }
+  constructor(
+    private router : Router
+  ) { }
 
   ngOnInit() {
-    setInterval(() => {
-      this.showProgressBar = false;
-    }, 1000)
+  }
+
+  public hideProgressbar($event) {
+    this.showProgressBar = false;
+  }
+
+  public newClient() {
+    this.router.navigateByUrl("/inventario/clientes/nuevo");
   }
 
 }

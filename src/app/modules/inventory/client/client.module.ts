@@ -7,6 +7,12 @@ import { TableClientsComponent } from './components/table-clients/table-clients.
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatButtonModule, MatIconModule, MatFormFieldModule, MatInputModule } from '@angular/material';
 import { ClientDetailComponent } from './pages/client-detail/client-detail.component';
+import { FormClientComponent } from './components/form-client/form-client.component';
+import { MatSelectModule } from '@angular/material/select';
+import { FormsModule } from '@angular/forms';
+import { ClientNewComponent } from './pages/client-new/client-new.component';
+import { ClientService } from '../../../shared/services/client.service';
+import { TypeDocumentService } from '../../../shared/services/type-document.service';
 
 
 @NgModule({
@@ -18,8 +24,20 @@ import { ClientDetailComponent } from './pages/client-detail/client-detail.compo
     MatButtonModule,
     MatIconModule,
     MatFormFieldModule,
-    MatInputModule
+    MatInputModule,
+    MatSelectModule,
+    FormsModule
   ],
-  declarations: [MainComponent, TableClientsComponent, ClientDetailComponent]
+  declarations: [
+    MainComponent, 
+    TableClientsComponent, 
+    ClientDetailComponent, 
+    FormClientComponent, 
+    ClientNewComponent
+  ],
+  providers : [
+    ClientService,
+    TypeDocumentService
+  ]
 })
 export class ClientModule { }

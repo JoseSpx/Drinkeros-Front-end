@@ -5,7 +5,7 @@ export interface Client {
     position? : number;
     id? : number;
     name : string;
-    lastname : string;
+    lastName : string;
     email : string;
     address : string;
     phone : string;

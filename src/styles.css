@@ -8,6 +8,10 @@
     outline: none;
 }
 
+body {
+    overflow-x: hidden;
+}
+
 *:focus{
     outline: 0 !important;
 }

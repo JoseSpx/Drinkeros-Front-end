@@ -11,6 +11,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { TitleBarComponent } from './title-bar/title-bar.component';
 import { ProgressBarComponent } from './progress-bar/progress-bar.component';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { ButtonBackComponent } from './button-back/button-back.component';
 
 @NgModule({
   imports: [
@@ -27,14 +28,16 @@ import { MatProgressBarModule } from '@angular/material/progress-bar';
     SidebarComponent,
     ActivityComponent,
     TitleBarComponent,
-    ProgressBarComponent
+    ProgressBarComponent,
+    ButtonBackComponent
   ],
   declarations: [
     NavbarComponent,
     SidebarComponent,
     ActivityComponent,
     TitleBarComponent,
-    ProgressBarComponent
+    ProgressBarComponent,
+    ButtonBackComponent
   ]
 })
 export class ComponentsModule { }

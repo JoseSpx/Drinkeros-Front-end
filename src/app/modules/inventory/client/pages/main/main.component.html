@@ -7,10 +7,18 @@
         </div>
       </div>
   </div>
-  <div *ngIf="!showProgressBar" class="container-fluid">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-12 d-flex justify-content-end mb-3">
+        <button id="btn-register" mat-flat-button class="default-primary-color py-1" (click)="newClient()">
+          <mat-icon> add_circle </mat-icon>
+          Registrar Nuevo Cliente
+        </button>
+      </div>
+    </div>
     <div class="row">
       <div class="col-12">
-        <app-table-clients></app-table-clients>
+        <app-table-clients (loaded)="hideProgressbar($event)"></app-table-clients>
       </div>
     </div>
   </div>
