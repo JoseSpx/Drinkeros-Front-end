@@ -1,0 +1,25 @@
+<app-progress-bar *ngIf="showProgressBar"></app-progress-bar>
+<div class="body-margin">
+  <div class="container-fluid">
+      <div class="row">
+        <div class="col-12">
+          <app-title-bar [title]="'Sección de Proveedores'" ></app-title-bar>
+        </div>
+      </div>
+  </div>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-12 d-flex justify-content-end mb-3">
+        <button id="btn-register" mat-flat-button class="default-primary-color py-1" (click)="newClient()">
+          <mat-icon> add_circle </mat-icon>
+          Registrar Nuevo Proveedor
+        </button>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <app-table-providers (loaded)="hideProgressbar($event)"></app-table-providers>
+      </div>
+    </div>
+  </div>
+</div>

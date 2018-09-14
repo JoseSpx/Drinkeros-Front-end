@@ -35,7 +35,7 @@ export class MainComponent implements OnInit {
 
     setInterval(() => {
       this.showProgressBar = false;
-    }, 2000)
+    }, 1000)
 
   }
 
