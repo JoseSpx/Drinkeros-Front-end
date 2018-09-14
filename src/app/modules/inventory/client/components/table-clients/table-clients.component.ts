@@ -4,6 +4,7 @@ import { Client } from '../../../../../shared/models/Client';
 import { Router } from '@angular/router';
 import { ClientService } from '../../../../../shared/services/client.service';
 
+declare var swal : any;
 
 @Component({
   selector: 'app-table-clients',
@@ -48,7 +49,30 @@ export class TableClientsComponent implements OnInit {
   }
 
   public deleteClient(id : number) {
-    
+    swal({
+      title: 'Está Seguro ?',
+      text: "Se eliminará al cliente!",
+      type: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Aceptar!'
+    }).then((result) => {
+      if (result.value) {
+        this.clientService.deleteClient(id)
+          .subscribe(
+            () => {
+              swal(
+                'Deleted!',
+                'El Cliente ha sido eliminado',
+                'success'
+              )
+              this.getClients();
+            }
+           )
+        
+      }
+    })
   }
 
 }
