@@ -1,5 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Product } from '../../../../../shared/models/Product';
+import { ProductService } from '../../../../../shared/services/product.service';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-form-product',
@@ -14,13 +16,35 @@ export class FormProductComponent implements OnInit {
   @Input()
   public btnText : string;
 
-  constructor() { }
+  @Input()
+  public state : string;
+
+  constructor(
+    private productService : ProductService,
+    private location : Location
+  ) { }
 
   ngOnInit() {
   }
 
   public save() {
     
+    if (this.state == "save") {
+      this.productService.save(this.product)
+        .subscribe(
+          () => {
+            this.location.back();
+          }
+        )
+    } else {
+      this.productService.update(this.product.id, this.product)
+        .subscribe(
+          () => {
+            this.location.back();
+          }
+        )
+    }
+
   }
 
 }
