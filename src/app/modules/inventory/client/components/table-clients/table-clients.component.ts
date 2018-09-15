@@ -63,7 +63,7 @@ export class TableClientsComponent implements OnInit {
           .subscribe(
             () => {
               swal(
-                'Deleted!',
+                'Eliminado!',
                 'El Cliente ha sido eliminado',
                 'success'
               )

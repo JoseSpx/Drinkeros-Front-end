@@ -1,19 +1,19 @@
 import { Component, OnInit, ViewChild, Output, EventEmitter } from '@angular/core';
 import { MatPaginator, MatTableDataSource } from '@angular/material';
 import { Router } from '@angular/router';
-import { ProviderService } from '../../../../../shared/services/provider.service';
-import { Provider } from '../../../../../shared/models/Provider';
+import { ProductService } from '../../../../../shared/services/product.service';
+import { Product } from '../../../../../shared/models/Product';
 
 declare var swal : any;
 
 @Component({
-  selector: 'app-table-providers',
-  templateUrl: './table-providers.component.html',
-  styleUrls: ['./table-providers.component.css']
+  selector: 'app-table-products',
+  templateUrl: './table-products.component.html',
+  styleUrls: ['./table-products.component.css']
 })
-export class TableProvidersComponent implements OnInit {
+export class TableProductsComponent implements OnInit {
 
-  public displayedColumns : string[] = ['ruc', 'name', 'email', 'address', 'phone','edit','delete'];
+  public displayedColumns : string[] = ['codebar', 'name','brand', 'priceSale', 'stockPhisycal','edit','delete'];
   public dataSource;
   
   @ViewChild(MatPaginator)
@@ -24,17 +24,17 @@ export class TableProvidersComponent implements OnInit {
 
   constructor(
     private router : Router,
-    private providerService : ProviderService
+    private productService : ProductService
   ) { }
 
   ngOnInit() {
-    this.getProviders();
+    this.getProducts();
   }
 
-  public getProviders() {
-    this.providerService.findAll()
+  public getProducts() {
+    this.productService.findAll()
      .subscribe(data => {
-        this.dataSource = new MatTableDataSource<Provider>(data);
+        this.dataSource = new MatTableDataSource<Product>(data);
         this.dataSource.paginator = this.paginator;
         this.loaded.emit(true);
      });
@@ -44,14 +44,14 @@ export class TableProvidersComponent implements OnInit {
     this.dataSource.filter = filterValue.trim().toLowerCase();
   }
 
-  public goProviderDetail(id : number) {
-    this.router.navigateByUrl("/inventario/proveedores/" + id);
+  public goDetail(id : number) {
+    this.router.navigateByUrl("/inventario/productos/" + id);
   }
 
-  public deleteProvider(id : number) {
+  public deleteById(id : number) {
     swal({
       title: 'Está Seguro ?',
-      text: "Se eliminará al proveedor!",
+      text: "Se eliminará al cliente!",
       type: 'warning',
       showCancelButton: true,
       confirmButtonColor: '#3085d6',
@@ -59,15 +59,15 @@ export class TableProvidersComponent implements OnInit {
       confirmButtonText: 'Aceptar!'
     }).then((result) => {
       if (result.value) {
-        this.providerService.delete(id)
+        this.productService.delete(id)
           .subscribe(
             () => {
               swal(
                 'Eliminado!',
-                'El Proveedor ha sido eliminado',
+                'El Producto ha sido eliminado',
                 'success'
               )
-              this.getProviders();
+              this.getProducts();
             }
            )
         
@@ -76,3 +76,5 @@ export class TableProvidersComponent implements OnInit {
   }
 
 }
+
+

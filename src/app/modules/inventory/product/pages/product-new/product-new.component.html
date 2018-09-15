@@ -1,0 +1,20 @@
+<app-progress-bar *ngIf="showProgressBar"></app-progress-bar>
+<div class="body-margin">
+  <div class="container-fluid">
+    <div class="row mb-3">
+      <div class="col-12">
+        <app-button-back></app-button-back>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <app-title-bar [title]="'Datos del Producto'" ></app-title-bar>
+      </div>
+    </div>
+  </div>
+  <div *ngIf="!showProgressBar" class="container-fluid">
+    <div class="form ">
+      <app-form-product [btnText]="'Registrar Producto'" [product]="product" ></app-form-product>
+    </div>
+  </div>
+</div>
