@@ -25,8 +25,12 @@ export class FormProviderComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    
+    this.setFocus();
   }
+
+  public setFocus() {
+    document.getElementById("first_input").focus();
+  } 
 
   public save() {
     if (this.state == "save") {

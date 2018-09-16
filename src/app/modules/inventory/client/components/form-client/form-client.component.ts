@@ -38,9 +38,12 @@ export class FormClientComponent implements OnInit {
 
   ngOnInit() {
     this.findDocumentSelected();
+    this.setFocus();
   }
 
-  
+  public setFocus() {
+    document.getElementById("first_input").focus();
+  }  
 
   public findDocumentSelected() {
     if (this.state == "save") {
