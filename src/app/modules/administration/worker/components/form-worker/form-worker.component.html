@@ -1,0 +1,60 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-12 col-lg-8">
+      <div class="row">
+        <div class="col-12">
+          <mat-form-field class="full-width">
+              <input matInput placeholder="Nombre" [(ngModel)]="worker.name" id="first_input">
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12">
+          <mat-form-field class="full-width">
+              <input matInput placeholder="Apellidos" [(ngModel)]="worker.lastName">
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="row">
+          <div class="col-12 col-lg-12">
+            <mat-form-field class="full-width">
+                <input matInput placeholder="Número de DNI" [(ngModel)]="worker.dni">
+            </mat-form-field>
+          </div>
+        </div>
+      <div class="row">
+        <div class="col-12">
+          <mat-form-field class="full-width">
+              <input matInput placeholder="Email" [(ngModel)]="worker.email">
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12">
+          <mat-form-field class="full-width">
+              <input matInput placeholder="Teléfono" [(ngModel)]="worker.phone">
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12">
+          <mat-form-field class="full-width">
+              <input matInput placeholder="Dirección" [(ngModel)]="worker.address">
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12 d-flex justify-content-center mt-2">
+          <button id="btn-save" mat-flat-button class="full-width" color="warn" (click)="save()">
+            {{ btnText }}
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="d-none d-lg-flex justify-content-center align-items-center col-lg-4">
+      <div class="justify-content-center align-items-center">
+          <img class="img-fluid" src="./../../../../../../assets/img/employee.png" alt="">
+      </div>
+    </div>
+  </div>
+</div>

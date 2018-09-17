@@ -11,6 +11,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { InventoryModule } from './modules/inventory/inventory.module';
 import { ClientService } from './shared/services/client.service';
 import { HttpClientModule } from '@angular/common/http';
+import { AdministrationModule } from './modules/administration/administration.module';
 
 
 @NgModule({
@@ -26,7 +27,8 @@ import { HttpClientModule } from '@angular/common/http';
     MatButtonModule,
     MatIconModule,
     InventoryModule,
-    HttpClientModule
+    HttpClientModule,
+    AdministrationModule
   ],
   providers: [
     

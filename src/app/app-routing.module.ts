@@ -10,11 +10,27 @@ import { ProviderDetailComponent } from './modules/inventory/provider/pages/prov
 import { MainComponent as ProductMainComponent } from './modules/inventory/product/pages/main/main.component';
 import { ProductNewComponent } from './modules/inventory/product/pages/product-new/product-new.component';
 import { ProductDetailComponent } from './modules/inventory/product/pages/product-detail/product-detail.component';
+import { MainComponent as WorkerMainComponent } from './modules/administration/worker/pages/main/main.component';
+import { WorkerNewComponent } from './modules/administration/worker/pages/worker-new/worker-new.component';
+import { WorkerDetailComponent } from './modules/administration/worker/pages/worker-detail/worker-detail.component';
 
 
 const routes : Routes = [
    { path : '', component :  DashboardMainComponent },
    { path : 'inicio', component : DashboardMainComponent },
+   { 
+     path : 'administracion',
+     children : [
+       { 
+         path : 'trabajadores', 
+         children : [
+            { path : '', component : WorkerMainComponent },
+            { path : 'nuevo', component : WorkerNewComponent },
+            { path : ':id', component : WorkerDetailComponent }
+         ] 
+       }
+     ] 
+   },
    { 
      path : 'inventario',
      children : [

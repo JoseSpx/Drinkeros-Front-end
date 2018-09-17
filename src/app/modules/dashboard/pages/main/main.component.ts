@@ -25,7 +25,8 @@ export class MainComponent implements OnInit {
     },
     {
       title : "Trabajadores",
-      img : "./../../../../../assets/img/manager.png"
+      img : "./../../../../../assets/img/manager.png",
+      link : "/administracion/trabajadores"
     }
   ]
   
